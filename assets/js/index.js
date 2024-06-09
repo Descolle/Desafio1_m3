@@ -1,18 +1,20 @@
 function priceCalculate() {
-  var precio = 400000;
-  var cantidad = 0;
-  var precioSpan = document.querySelector("#precio-inicial");
+  let precio = 400000;
+  let cantidad = 0;
+  let precioSpan = document.querySelector("#precio-inicial");
+  let cantidadSpan = document.querySelector('#carrito')
   precioSpan.innerHTML = precio;
   console.log("hola");
   const adicion = document.querySelector("#plusle");
   const sustraccion = document.querySelector("#minum");
-  const precioFinalSpan = document.querySelector("#valorTotal");
+  const precioFinalSpan = document.querySelector('#valorTotal')
   adicion.addEventListener("click", function () {
     console.log("click");
     cantidad += 1;
     let precioFinal = precio * cantidad;
     console.log(precioFinal);
-    precioFinalSpan.innerHTML = precioFinal;
+    cantidadSpan.innerHTML= cantidad
+    precioFinalSpan.innerHTML = precioFinal
   });
   sustraccion.addEventListener("click", function () {
     if (cantidad > 0) {
@@ -20,7 +22,8 @@ function priceCalculate() {
       cantidad -= 1;
       let precioFinal = precio * cantidad;
       console.log(precioFinal);
-      precioFinalSpan.innerHTML = precioFinal;
+      cantidadSpan.innerHTML= cantidad
+      precioFinalSpan.innerHTML = precioFinal
     }
   });
 }
