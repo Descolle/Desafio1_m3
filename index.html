@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,43 +7,25 @@
     <title>Desafío 1 - JavaScript</title>
     <link rel="stylesheet" href="./assets/style/estilos.css">
 </head>
-
 <body>
-
     <section>
         <div class="card">
             <div class="img-card"></div>
               <h6>Laptop Gamer AMD</h6>
-              <p>Precio base: $<span class="precio-inicial"> 0 </span> </p>
+              <p>Precio base: $<span id="precio-inicial"> 0 </span> </p>
               <p>Cantidad:
                 <span class="cantidad"> 0 </span>
-                <button onclick="
-                let precio= document.querySelector('.precio-inicial').innerHTML
-                let cantidad_final = document.querySelector('.cantidad')
-                resultado = Number(cantidad_final.innerHTML)+1
-                cantidad_final.innerHTML = resultado
-                let aPago = document.querySelector('.valorTotal');
-                aPago.innerHTML = resultado * precio;
-                "
+                <button id= "plusle"
                 >+</button>
-                <button onclick="
-                cantidad_final = document.querySelector('.cantidad')
-                resultado = Number(cantidad_final.innerHTML)-1
-                if (resultado < 0) resultado = 0;
-                cantidad_final.innerHTML = resultado
-                aPago = document.querySelector('.valorTotal');
-                aPago = resultado * precio;
-                valorTotal.innerHTML = aPago;
-                "
+                <button id= "minum"
                 >-</button>
               </p>
             </div>
         </div>
     </section>
     <div class="total-section">
-        <p>Total a pagar: $<span class="valorTotal"> 0 </span> </p>
+        <p>Total a pagar: $<span id="valorTotal"> 0 </span> </p>
     </div>
-
     <script src="./assets/js/index.js">
     </script>
 </body>
